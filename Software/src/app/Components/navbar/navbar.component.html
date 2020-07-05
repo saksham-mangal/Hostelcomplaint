@@ -1,0 +1,16 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">Hostel Complaint and Management System</a>
+        </div>
+        <ul class="nav nav-right">
+            <li><a *ngIf = "!authService.loggedIn()" routerLink = "/" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">Home</a></li>
+            <li><a *ngIf = "authService.loggedIn()" routerLink = "/complaint" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">Complaint</a></li>
+            <li><a *ngIf = "authService.loggedIn()" routerLink = "/all-complaints" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">All-Complaints</a></li>
+            <li><a *ngIf = "authService.loggedIn()" routerLink = "/complaint-form" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">Complaint-form</a></li>
+            <li><a *ngIf = "!authService.loggedIn()" routerLink = "/register" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">Register</a></li>
+            <li><a *ngIf = "!authService.loggedIn()" routerLink = "/login" routerLinkActive = "active" [routerLinkActiveOptions] = "{exact: true}">Login</a></li>
+            <li><a *ngIf = "authService.loggedIn()" href="#" (click) ="onClickLogout()" >Logout</a></li>
+        </ul>
+    </div>
+</nav>

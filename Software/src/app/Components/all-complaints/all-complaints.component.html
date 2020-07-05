@@ -1,0 +1,30 @@
+<div class="image1">
+  <br><br>
+  <h1 style="text-align:center">Complaints Page</h1>
+  <br><br>
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Complaint_Id</th>
+        <th scope="col">Roll_No</th>
+        <th scope="col">Room_No</th>
+        <th scope="col">Complaint_Type</th>
+        <th scope="col">Complaint_Details</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor = "let user of users.Details">
+        <td>{{user.Complaint_Id}}</td>
+        <td>{{user.Roll_No}}</td>
+        <td>{{user.Room_No}}</td>
+        <td>{{user.Complaint_Type}}</td>
+        <td>{{user.Complaint_Details}}</td>
+        <td>{{user.Status}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <h6 style="text-align:right"> Total Complaints: {{users.Details.length}}</h6>
+</div>

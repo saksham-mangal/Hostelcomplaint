@@ -1,0 +1,47 @@
+<div class="image1">
+    <div>
+        <h1 style="text-align:center" >Complaint Form</h1>
+        <br><br>
+        <form (submit) = "onClickSubmit()">
+            <ol>                        
+                <div>
+                    <p class="topic">Roll Number</p>
+                    <input type="text" [(ngModel)] = "Roll_No" name="Roll_No">
+                    <br>
+                </div>
+                <br><br>
+
+                <div>
+                    <p class="topic">Room Number</p>
+                    <input type="text" [(ngModel)] = "Room_No" name="Room_No">
+                    <br><br>
+                </div>
+                <br><br>
+
+                <div>
+                    <p class="topic">COMPLIANT TYPE</p>
+                    <select  [(ngModel)] = "Complaint_Type" name="Complaint_Type">
+                        <option value="Plumber">Plumber</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="Wi-Fi">Wi-Fi</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <br><br>
+                </div>
+                <br><br>                        
+                        
+                <div>
+                    <p class="topic">COMPLIANT DESCRIPTION </p>
+                    <p class="description">Please Describe Your Grievance </p>
+                    <input type="text" [(ngModel)] = "Complaint_Details" name="Complaint_Details">
+                </div>
+                <br><br>
+                <br><br>
+                        
+                <input type="submit" value="Submit">
+                <input type="reset"> 
+            </ol>
+        </form>
+    </div>
+</div>
